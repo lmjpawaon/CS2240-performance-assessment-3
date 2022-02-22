@@ -1,0 +1,93 @@
+:root{
+    --body-bg: #221F1F;
+    --lighter-red: #e50914;
+    --darker-red: #b91d24;
+    --white: #f5f5f1;
+}
+
+*{
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+html{
+    overflow-x:hidden;
+    scroll-behavior: smooth;   
+    background-color: var(--body-bg);
+}
+
+
+/*Navbar*/
+#mainNav{
+    background-color: var(--body-bg)!important;
+    padding:.5rem;
+}
+.container ul li{
+    margin: 10px 30px;
+}
+.nav-link{
+    color:var(--white) !important;
+    font-weight: 500;
+}
+
+.navbar-brand{
+    font-size:1.5rem !important;
+}
+
+.navbar-collapse{
+    padding-left: 10rem !important;
+}
+
+.navbar-nav .nav-account .nav-link{
+    color: var(--white) !important;;
+}
+
+.navbar>.container>a{
+   color:var(--white) !important;
+   text-decoration:none !important;
+   font-weight:bold;
+}
+.nav-link:hover{
+    color:var(--darker-red) !important;
+}
+
+.dropdown-menu{
+    color:var(--white) !important;
+}
+
+/*Loader Content*/
+.content{
+    display: none;
+}
+
+.loader{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: var(--body-bg);
+    position: absolute;
+}
+.loader>div{
+    height: 100px;
+    width: 100px;
+    border: 15px solid #45474b;
+    border-top-color: var(--darker-red);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    animation: spin 1.5s infinite linear;
+}
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
