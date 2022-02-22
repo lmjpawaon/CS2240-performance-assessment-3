@@ -10,85 +10,197 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <!--jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!--jquery ui-->
-    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js" integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY=" crossorigin="anonymous"></script>
+    <!-- SLICK-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--slick
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    -->
     <!--bootstrap css-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!--iconify js file-->
     <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
-    <!--local js-->
-    <script type="text/javascript" src="./js/scripts.js"></script>
-    <title>AnimeFlix</title>
+    
+    <title>AniFlix - Fast Anime Streaming</title>
 </head>
 <body>
     <div class="loader">
         <div></div>
     </div>
-    <div class="content">
 
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
-            <div class="container">
-                <span class="iconify" data-icon="fluent:movies-and-tv-16-filled" style="color: #B81D24;" data-width="28" data-height="28"></span>
-                <a class="navbar-brand" href="#">ANIME<span class="flix" style="color: #B81D24;">FLIX</span></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">HOME</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" type="button" >BROWSE</a>
-                            <ul class="dropdown-menu dropdown-menu-dark" >
-                                <li><a>Trending</a></li>
-                                <li><a>Highest Rated</a></li>
-                                <li><a>New Arrival</a></li>
-                                <li><a>Requested Anime</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" type="button" >GENRE</a>
-                            <ul class="dropdown-menu dropdown-menu-dark" >
-                                <li><a>Action</a></li>
-                                    <li><a>Adventure</a></li>
-                                    <li><a>Comedy</a></li>
-                                    <li><a>Drama</a></li>
-                                    <li><a>Ecchi</a></li>
-                                    <li><a>Fantasy</a></li>
-                                    <li><a>Horror</a></li>
-                                    <li><a>Magic</a></li>
-                                    <li><a>Mecha</a></li>
-                                    <li><a>Romance</a></li>
-                                    <li><a>School</a></li>
-                                    <li><a>Sci-Fi</a></li>
-                                    <li><a>Shounen</a></li>
-                                    <li><a>Slice of Life</a></li>
-                                    <li><a>Supernatural</a></li>
-                                    <li><a>Thriller</a></li>
-                                    <li><a>War</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">REQUEST ANIME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://github.com/lmjpawaon/CS2240-performance-assessment-3">GITHUB REPOSITORY</a>
-                        </li>
-                    </ul>
-                </div>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
+        <div class="container">
+            <span class="iconify" data-icon="fluent:movies-and-tv-16-filled" style="color: #B81D24;" data-width="28" data-height="28"></span>
+            <a class="navbar-brand" href="#">ANI<span class="flix" style="color: #B81D24;">FLIX</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" type="button" >BROWSE</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" >
+                            <li><a class="dropdownBtns" href="#trending">Trending</a></li>
+                            <li><a class="dropdownBtns" href="#top">Highest Rated</a></li>
+                            <li><a class="dropdownBtns" >New Arrival</a></li>
+                            <li><a class="dropdownBtns" >Requested Anime</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" type="button" >GENRE</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" >
+                            <li><a>Action</a></li>
+                                <li><a>Adventure</a></li>
+                                <li><a>Comedy</a></li>
+                                <li><a>Drama</a></li>
+                                <li><a>Ecchi</a></li>
+                                <li><a>Fantasy</a></li>
+                                <li><a>Horror</a></li>
+                                <li><a>Magic</a></li>
+                                <li><a>Mecha</a></li>
+                                <li><a>Romance</a></li>
+                                <li><a>School</a></li>
+                                <li><a>Sci-Fi</a></li>
+                                <li><a>Shounen</a></li>
+                                <li><a>Slice of Life</a></li>
+                                <li><a>Supernatural</a></li>
+                                <li><a>Thriller</a></li>
+                                <li><a>War</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">REQUEST ANIME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/lmjpawaon/CS2240-performance-assessment-3">GITHUB REPOSITORY</a>
+                    </li>
+                </ul>
+                <div class="input-group">
+                    <div class="form-outline">
+                        <input type="search" id="form1" class="form-control" />
+                        
+                    </div>
+                    <button type="button" class="btn">
+                        <span class="iconify" data-icon="ant-design:search-outlined" style="color: #b81d24;"  data-width="28" data-height="28"></span>
+                    </button>
+                    </div>
             </div>
-          </nav>
+        </div>
+        </nav>
 
-          <!--Slider-->
-          
+        <!--Slider-->
+        
+        <!--Trending-->
+    <section class="trending" id="trending">
+        <div class="sectionTitle">
+            <h2 class="trendingAnime">TRENDING <span style="color:#f5f5f1;">ANIME</span></h2>
+        </div>
+        <div class="carousel">
+            <div class="carousel-cell"><img src="./assets/trending/AOT.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/trending/KNY.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/trending/onepiece.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/trending/dressupdarling.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/trending/karakai.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/trending/jojop6.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/trending/bisco.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/trending/ousamaranking.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/trending/vanitas.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/trending/akebi.jpg"></div>
+          </div>
+    </section>
 
+    <!--Newly Added Anime-->
+    <section class="nextSection" id="top">
+        <div class="sectionTitle">
+            <h2 class="trendingAnime">NEWLY ADDED <span style="color:#f5f5f1;">ANIME</span></h2>
+        </div>
+        <div class="carousel">
+            <div class="carousel-cell"><img src="./assets/newarrival/vinland.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/newarrival/86.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/newarrival/dororo.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/newarrival/madeinabyss.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/newarrival/kaguyasama.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/newarrival/noragami.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/newarrival/onepunch.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/newarrival/violetevergarden.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/newarrival/saiki.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/newarrival/haikyuu.jpg"></div>
+          </div>
+    </section>
 
+     <!--Top Anime-->
+     <section class="nextSection" id="top">
+        <div class="sectionTitle">
+            <h2 class="trendingAnime">TOP <span style="color:#f5f5f1;">ANIME</span></h2>
+        </div>
+        <div class="carousel">
+            <div class="carousel-cell"><img src="./assets/highest/fmab.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/highest/AOT.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/highest/steins.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/highest/gintama.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/highest/aots3.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/highest/fruitsbasket.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/highest/hunterhunter.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/highest/gingga.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/highest/3gatsus2.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/highest/codegeasss2.jpg"></div>
+          </div>
+    </section>
 
-    </div>
+    <!--Requested Anime-->
+    <section class="nextSection" id="top">
+        <div class="sectionTitle">
+            <h2 class="trendingAnime">REQUESTED <span style="color:#f5f5f1;">ANIME</span></h2>
+        </div>
+        <div class="carousel">
+            <div class="carousel-cell"><img src="./assets/requested/blacklagoon.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/requested/berserk.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/requested/cowboybebop.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/requested/samuraichamploo.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/requested/slamdunk.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/requested/hajime.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/requested/monster.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/requested/mushishi.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/requested/nana.jpg"></div>
+            <div class="carousel-cell"><img src="./assets/requested/gangsta.jpg"></div>
+          </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer class="site-footer"> 
+        <div class="container">
+            <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h1 class="footerLabel">ANI<span class="footerLabel2">FLIX</span></h1>
+                <p class="text-justify">Watch New and Trending Anime updated</p>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Applications Development and Emerging Technologies Performance Assessment 3 by 
+                <a href="https://github.com/lmjpawaon">Louis Miguel J. Pawaon</a>.
+                </p>
+            </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END FOOTER SECTION -->
+
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- SLICK -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--jquery ui-->
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js" integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY=" crossorigin="anonymous"></script>
+    <!--local js-->
+    <script type="text/javascript" src="./js/scripts.js"></script>
 </body>
 </html>
