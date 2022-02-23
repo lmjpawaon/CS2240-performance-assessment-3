@@ -1,6 +1,6 @@
 $('.hero-carousel').slick({
     autoplay: true,
-    autoplayspeed: 1500,
+    autoplaySpeed: 1500,
     centerMode:true,
     arrows:false,
     responsive: [
@@ -83,6 +83,40 @@ $(document).ready(function() {
       }); 
   
   });
+
+  /*Modals*/
+
+  $("#rumblingModal").draggable({
+    handle: ".modal-header"
+  });
+
+  var url = $("#theRumbling").attr('src');
+    
+  $("#rumblingModal").on('hide.bs.modal', function(){
+      $("#theRumbling").attr('src', '');
+  });
+    
+  $("#rumblingModal").on('show.bs.modal', function(){
+      $("#theRumbling").attr('src', url);
+  });
+
+
+  $("#chainsawModal").draggable({
+    handle: ".modal-header"
+  });
+
+  var url = $("#chainsaw").attr('src');
+    
+  $("#chainsawModal").on('hide.bs.modal', function(){
+      $("#chainsaw").attr('src', '');
+  });
+    
+  $("#chainsawModal").on('show.bs.modal', function(){
+      $("#chainsaw").attr('src', url);
+  });
+
+
+
   
 });
 
