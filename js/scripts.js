@@ -84,6 +84,13 @@ $(document).ready(function() {
   
   });
 
+
+  $("p").hover(function(){
+    $(this).css("opacity", ".75");
+    }, function(){
+    $(this).css("opacity", "1");
+  });
+
   /*Modals*/
 
   $("#rumblingModal").draggable({
@@ -105,14 +112,14 @@ $(document).ready(function() {
     handle: ".modal-header"
   });
 
-  var url = $("#chainsaw").attr('src');
+  var url2 = $("#chainsaw").attr('src');
     
   $("#chainsawModal").on('hide.bs.modal', function(){
       $("#chainsaw").attr('src', '');
   });
     
   $("#chainsawModal").on('show.bs.modal', function(){
-      $("#chainsaw").attr('src', url);
+      $("#chainsaw").attr('src', url2);
   });
 
 
