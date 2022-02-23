@@ -3,6 +3,26 @@ $('.hero-carousel').slick({
     autoplayspeed: 1500,
     centerMode:true,
     arrows:false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
 });
 
 $('.carousel').slick({
