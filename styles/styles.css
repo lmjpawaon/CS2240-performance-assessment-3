@@ -24,6 +24,7 @@ body{
 #mainNav{
     background-color: var(--body-bg)!important;
     padding:.5rem;
+    z-index: 1;
 }
 .container ul li{
     margin: 10px 30px;
@@ -200,14 +201,12 @@ body{
 
 .nxtBtn{
     position: absolute;
-    z-index: 1000;
     top:-13%;
     right:10%;
 }
 
 .prevBtn{
     position: absolute;
-    z-index: 1000;
     top: -13%;
     right: 15%;
 }
