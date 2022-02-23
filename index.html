@@ -96,29 +96,82 @@
             <div class="hero-slide">
                 <div class="hero-carousel">
                     <div class="hero-carousel-inner">
+                        <span id="playButton" class="iconify" data-icon="ci:play-circle-outline" style="color: #b91d24;" data-width="200" data-height="200" data-bs-toggle="modal" data-bs-target="#rumblingModal"></span>
                         <img class="hero-img" src="./assets/news/therumbling.png">
                             <p class="hero-caption">Attack on Titan:<br>The Rumbling Has Begun</p>
                         </div>
                     <div class="hero-carousel-inner">
-                        <img class="hero-img" src="./assets/news/chainsaw.jpg">
+                        <span id="playButton" class="iconify" data-icon="ci:play-circle-outline" style="color: #b91d24;" data-width="200" data-height="200" data-bs-toggle="modal" data-bs-target="#chainsawModal"></span>
+                        <img class="hero-img" src="./assets/news/chainsaw.png">
                             <p class="hero-caption">Chainsaw Man Anime Adaptation<br>Scheduled for 2022</p>
                     </div>
                     <div class="hero-carousel-inner">
-                        <img class="hero-img" src="./assets/news/kimetsu.jpg">
+                        <span id="playButton" class="iconify" data-icon="ci:play-circle-outline" style="color: #b91d24;" data-width="200" data-height="200" data-bs-toggle="modal" data-bs-target="#kimetsuModal"></span>
+                        <img class="hero-img" src="./assets/news/kimetsu.png">
                             <p class="hero-caption">New Season of Demon Slayer<br>Announced!</p>
                     </div>
                     <div class="hero-carousel-inner">
+                        <span id="playButton" class="iconify" data-icon="ci:play-circle-outline" style="color: #b91d24;" data-width="200" data-height="200"></span>
                         <img class="hero-img" src="./assets/news/classroom.png">
                         <p class="hero-caption">Classroom of the Elite Season 2<br>Announced!</p>
                     </div>
                     <div class="hero-carousel-inner">
-                        <img class="hero-img" src="./assets/news/tatenoyuusha.jpg">
+                        <span id="playButton" class="iconify" data-icon="ci:play-circle-outline" style="color: #b91d24;" data-width="200" data-height="200"></span>
+                        <img class="hero-img" src="./assets/news/tatenoyuusha.png">
                         <p class="hero-caption">New Trailer for Shield Hero Season 2<br>Released!</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!--Modals-->
+    <div class="modal fade" id="rumblingModal" role="dialog" aria-labelledby="rumblingModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">THE RUMBLING HAS BEGUN</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <iframe id="theRumbling" width="315" src="https://www.youtube.com/embed/Uwza8rHaPzw" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modals-->
+    <div class="modal fade" id="chainsawModal" role="dialog" aria-labelledby="chainsawModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">CHAINSAW MAN TV ADAPTATION</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <iframe id="chainsaw" width="315" src="https://www.youtube.com/embed/6f7BZjnjSM4" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modals-->
+    <div class="modal fade" id="kimetsuModal" role="dialog" aria-labelledby="chainsawModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">DEMON SLAYER SWORDSMITH ARC</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <iframe id="kimetsu" width="315" src="https://www.youtube.com/embed/XfOznSzh05s" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
         
         <!--Trending-->
     <section class="trending fade-in" id="trending">
@@ -198,9 +251,72 @@
 
 
     <!--Request Form-->
-    <section class="requestAnime" id="requestForm">
-        
-    </section>
+    <section class="requestAnime fade-in">
+        <div class="formTitle" id="requestForm">
+            <h1 id="requestAni" class="text-center">Request an <span style="color:#f5f5f1;">Anime</span></h1>
+            <p class="subHead text-center">If the anime isn't listed in our library, you can send your request here, we will try to make it available asap!</p>
+        </div>
+        <div class="formContent">
+            <form class="row needs-validation" novalidate>
+
+                <div class="col-6">
+                  <label for="emailAdd">Email Address</label>
+                  <input type="text" class="form-control" id="emailAdd" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Enter a valid email address.
+                  </div>
+
+                </div>
+
+                <div class="col-6">
+                  <label for="aniTitle" class="form-label">Anime Title</label>
+                  <input type="text" class="form-control" id="aniTitle" required>
+
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Enter a valid title
+                  </div>
+
+                </div>
+
+                <div class="col-6">
+                    <label for="aniLink" class="form-label">IMDB or MyAnimeList Link</label>
+                    <input type="text" class="form-control" id="aniLink" required>
+  
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Enter a valid title
+                    </div>
+  
+                  </div>
+                  
+                  <div class="col-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                      <label class="form-check-label" for="invalidCheck">
+                        All information provided are correct and rightfully appropriate.
+                      </label>
+  
+                      <div class="invalid-feedback">
+                        You must agree before submitting.
+                      </div>
+  
+                    </div>
+                  </div>
+                  <div class="col-6" id="submitBtn">
+                    <button id="submitTime" class="btn btn-danger" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">REQUEST</button>
+                  </div>
+
+            </form>
+        </div>
+    </section>  
 
 
 
@@ -210,7 +326,7 @@
             <div class="row">
             <div class="col-sm-12 col-md-6">
                 <h1 class="footerLabel">ANI<span class="footerLabel2">FLIX</span></h1>
-                <p class="text-justify">Watch New and Trending Anime updated</p>
+                <p class="text-justify">Watch New and Trending Anime where you can watch online for free without registration required. With a big database and great features, we're confident AniFlix is the best free movies online website in the space that you can't simply miss!</p>
             </div>
             <hr>
         </div>
