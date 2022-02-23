@@ -12,7 +12,11 @@
 html{
     overflow-x:hidden;
     scroll-behavior: smooth;   
-    background-color: var(--body-bg);
+    background-color: var(--body-bg)!important;
+}
+
+body{
+    background-color: var(--body-bg)!important;
 }
 
 
@@ -73,6 +77,7 @@ html{
     overflow: hidden;
     background-color: var(--body-bg);
     position: absolute;
+    z-index: 9999;
 }
 .loader>div{
     height: 100px;
@@ -94,11 +99,52 @@ html{
     }
 }
 
+.fade-in{
+    opacity:0;
+}
+
+/*Hero*/
+.hero{
+    padding-top: 9.5rem;
+    padding-bottom: 6rem;
+    background-color: var(--body-bg)!important;
+}
+
+.hero-carousel-caption{
+    z-index: 1000;
+}
+
+
+
+.hero-img{
+    height: 625px!important;
+    width: 1200px!important;
+    object-fit: cover;
+}
+
+.hero-caption{
+    color:var(--white) !important;
+    font-size:3rem !important;
+    font-weight:800 !important;
+    top:70%;
+    position: absolute;
+    background-color: var(--darker-red)!important;
+}
+
+.hero-subcaption{
+    color:var(--white) !important;
+    font-size:20px !important;
+    top:85%;
+    position: absolute;
+    background-color: var(--body-bg)!important;
+}
+
+
 /*Trending*/
 .trending{
     min-height: 25vh;
     min-width: 100vw;
-    padding-top:15rem;
+    padding-top:5rem;
     background-color: var(--body-bg);
 }
 
@@ -126,8 +172,32 @@ html{
 }
 
 .slick-prev, .slick-next{
-    color: var(--darker-red)!important;
-    z-index: 9999;
+    color: var(--white)!important;
+    
+}
+
+.nxtBtn, .prevBtn{
+    border-radius: 50%;
+    border:none;
+    background-color: var(--darker-red) !important;
+}
+
+.nxtBtn:hover, .prevBtn:hover{
+    opacity:.75;
+}
+
+.nxtBtn{
+    position: absolute;
+    z-index: 1000;
+    top:-13%;
+    right:10%;
+}
+
+.prevBtn{
+    position: absolute;
+    z-index: 1000;
+    top: -13%;
+    right: 14%;
 }
 
 .carousel-cell>img{
