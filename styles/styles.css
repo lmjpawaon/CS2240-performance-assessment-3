@@ -127,12 +127,13 @@ body{
     top:70%;
     position: absolute;
     background-color: var(--darker-red)!important;
+    cursor: pointer;
 }
 
 #playButton{
-    position: sticky;
-    top: 50%;
-    transform: translate(250%, -20%);
+    position: relative;
+    top:350px;
+    left: 400px;
     cursor: pointer;
 }
 
