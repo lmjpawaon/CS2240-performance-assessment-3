@@ -85,7 +85,7 @@ $(document).ready(function() {
   });
 
 
-  $("p").hover(function(){
+  $(".hero-caption").hover(function(){
     $(this).css("opacity", ".75");
     }, function(){
     $(this).css("opacity", "1");
@@ -93,10 +93,24 @@ $(document).ready(function() {
 
   /*Modals*/
 
+  //Draggable Functions
   $("#rumblingModal").draggable({
     handle: ".modal-header"
   });
 
+  $("#chainsawModal").draggable({
+    handle: ".modal-header"
+  });
+
+  $("#kimetsuModal").draggable({
+    handle: ".modal-header"
+  });
+
+  $("#shieldModal").draggable({
+    handle: ".modal-header"
+  });
+
+  //Functions for Iframe
   var url = $("#theRumbling").attr('src');
     
   $("#rumblingModal").on('hide.bs.modal', function(){
@@ -122,8 +136,29 @@ $(document).ready(function() {
       $("#chainsaw").attr('src', url2);
   });
 
+  $("#kimetsuModal").draggable({
+    handle: ".modal-header"
+  });
 
+  var url3 = $("#kimetsu").attr('src');
+    
+  $("#kimetsuModal").on('hide.bs.modal', function(){
+      $("#kimetsu").attr('src', '');
+  });
+    
+  $("#kimetsuModal").on('show.bs.modal', function(){
+      $("#kimetsu").attr('src', url3);
+  });
 
+  var url4 = $("#shieldHero").attr('src');
+    
+  $("#shieldModal").on('hide.bs.modal', function(){
+      $("#shield").attr('src', '');
+  });
+    
+  $("#shieldModal").on('show.bs.modal', function(){
+      $("#shield").attr('src', url3);
+  });
   
 });
 
