@@ -27,6 +27,8 @@ $('.hero-carousel').slick({
 
 $('.carousel').slick({
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
     arrows: true,
     prevArrow:'<button class="prevBtn"><span class="iconify" data-icon="ooui:previous-ltr" style="color: #f5f5f1;"></span></button>',
     nextArrow:'<button class="nxtBtn"><span class="iconify" data-icon="ooui:previous-rtl" style="color: #f5f5f1;"></span></button>',
@@ -83,7 +85,6 @@ $(document).ready(function() {
       }); 
   
   });
-
 
   $(".hero-caption").hover(function(){
     $(this).css("opacity", ".75");
@@ -159,6 +160,52 @@ $(document).ready(function() {
   $("#shieldModal").on('show.bs.modal', function(){
       $("#shield").attr('src', url3);
   });
+  
+  $( function() {
+    var availableTags = [
+      "Attack on Titan",
+      "Akebi No Sailor",
+      "Case of Vanitas",
+      "Demon Slayer",
+      "One Piece",
+      "Dress-up Darling",
+      "Teasing Master Takagi-San",
+      "Jojo's Bizarre Adventure",
+      "Sabikui Bisco",
+      "Ousama Ranking",
+      "Kaguya-sama: Love is War",
+      "Noragami",
+      "One Punch Man",
+      "Violet Evergarden",
+      "Saiki Kusuo",
+      "Haikyuu",
+      "Vinland Saga",
+      "86",
+      "Dororo",
+      "Made in Abyss",
+      "Fruits Basket",
+      "HunterxHunter",
+      "3-gatsu No Lion",
+      "Code Geass",
+      "Fullmetal Alchemist",
+      "Ginga Eiyuu Densetsu",
+      "Steins;Gate",
+      "Gintama",
+      "Nana",
+      "Gangsta",
+      "Black Lagoon",
+      "Berserk",
+      "Cowboy Bebop",
+      "Samurai Champloo",
+      "Slam Dunk",
+      "Hajime no Ippo",
+      "Monster",
+      "Mushishi"
+    ];
+    $( "#search" ).autocomplete({
+      source: availableTags
+    });
+  } );
   
 });
 
