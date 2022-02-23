@@ -114,8 +114,6 @@ body{
     z-index: 1000;
 }
 
-
-
 .hero-img{
     height: 625px!important;
     width: 1200px!important;
@@ -124,21 +122,18 @@ body{
 
 .hero-caption{
     color:var(--white) !important;
-    font-size:3rem !important;
+    font-size:3rem!important;
     font-weight:800 !important;
     top:70%;
     position: absolute;
     background-color: var(--darker-red)!important;
 }
 
-.hero-subcaption{
-    color:var(--white) !important;
-    font-size:20px !important;
-    top:85%;
-    position: absolute;
-    background-color: var(--body-bg)!important;
+@media only screen and (max-width:780px){
+    .hero-caption{
+        font-size:2rem!important;
+    }
 }
-
 
 /*Trending*/
 .trending{
@@ -160,12 +155,6 @@ body{
     min-width: 100vw;
     background-color: var(--body-bg);
 }
-/*.bottom-left {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-    color:var(--white);
-}*/
 
 #title{
     font-size:3rem;
@@ -197,7 +186,7 @@ body{
     position: absolute;
     z-index: 1000;
     top: -13%;
-    right: 14%;
+    right: 15%;
 }
 
 .carousel-cell>img{
@@ -208,6 +197,11 @@ body{
 .carousel{
     text-align: center;
 }
+
+/*Request Form*/
+
+
+
 
 /*Footer*/
 footer{
