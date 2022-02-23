@@ -105,7 +105,7 @@ body{
 
 /*Hero*/
 .hero{
-    padding-top: 9.5rem;
+    padding-top: 1rem;
     padding-bottom: 6rem;
     background-color: var(--body-bg)!important;
 }
@@ -127,6 +127,28 @@ body{
     top:70%;
     position: absolute;
     background-color: var(--darker-red)!important;
+}
+
+#playButton{
+    position: sticky;
+    top: 50%;
+    transform: translate(250%, -20%);
+    cursor: pointer;
+}
+
+.modal-content{
+    background-color: var(--body-bg)!important;
+    color:var(--darker-red);
+}
+
+.modal-title{
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.close{
+    background-color:var(--darker-red);
+    border:none;
 }
 
 @media only screen and (max-width:780px){
@@ -200,7 +222,35 @@ body{
 
 /*Request Form*/
 
+.requestAnime{
+    min-height: 50vh;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
 
+#requestAni{
+    font-weight: 800;
+    color:var(--darker-red);
+}
+
+.subHead{
+    color:var(--white) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label{
+    color:var(--lighter-red);
+    font-weight:600;
+}
+
+.formContent>form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 
 /*Footer*/
