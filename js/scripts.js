@@ -158,8 +158,10 @@ $(document).ready(function() {
   });
     
   $("#shieldModal").on('show.bs.modal', function(){
-      $("#shield").attr('src', url3);
+      $("#shield").attr('src', url4);
   });
+
+  /*Autocomplete*/
   
   $( function() {
     var availableTags = [
@@ -207,6 +209,37 @@ $(document).ready(function() {
     });
   } );
   
+  //Request Form Input Validation
+  $("#request-form").validate({
+    rules: {
+      emailAdd:{
+        required: true,
+        email: true
+      },
+      aniTitle: "required",
+      aniLink:{
+        required: true,
+        url: true
+      },
+      agreement: "required"
+    },
+      messages:{
+        emailAdd: {
+          required:"Please enter an appropriate input.",
+          email: "Please enter an appropriate email address."
+        },
+        aniTitle: "Please enter an appropriate input.",
+        aniLink: {
+          required: "Please enter an appropriate input.",
+          url: "Please enter an appropriate URL."
+        },
+        agreement: "Please agree to the terms and conditions."
+      },
+      submitHandler: function(form) {
+        $('.toast').toast('show');
+      }
+    });
+
 });
 
 
