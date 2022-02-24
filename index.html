@@ -263,66 +263,52 @@
             <p class="subHead text-center">If the anime isn't listed in our library, you can send your request here, we will try to make it available asap!</p>
         </div>
         <div class="formContent">
-            <form class="row needs-validation" novalidate>
+            <form id="request-form" class="row g-3" novalidate="novalidate">
 
-                <div class="col-6">
+                <div class="form-group col-6">
                   <label for="emailAdd">Email Address</label>
-                  <input type="text" class="form-control" id="emailAdd" required>
-                  <div class="valid-feedback">
-                    Looks good!
-                  </div>
-                  <div class="invalid-feedback">
-                    Enter a valid email address.
-                  </div>
-
+                  <input type="text" class="form-control" name="emailAdd" required>
                 </div>
 
-                <div class="col-6">
+                <div class="form-group col-6">
                   <label for="aniTitle" class="form-label">Anime Title</label>
-                  <input type="text" class="form-control" id="aniTitle" required>
-
-                  <div class="valid-feedback">
-                    Looks good!
-                  </div>
-                  <div class="invalid-feedback">
-                    Enter a valid title
-                  </div>
-
+                  <input type="text" class="form-control" id="aniTitle" name="aniTitle" required>
                 </div>
 
-                <div class="col-6">
+                <div class="form-group col-6">
                     <label for="aniLink" class="form-label">IMDB or MyAnimeList Link</label>
-                    <input type="text" class="form-control" id="aniLink" required>
-  
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
-                    <div class="invalid-feedback">
-                      Enter a valid title
-                    </div>
-  
+                    <input type="text" class="form-control" id="aniLink" name="aniLink" required>
                   </div>
                   
-                  <div class="col-6">
+                <div class="form-group col-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                      <label class="form-check-label" for="invalidCheck">
-                        All information provided are correct and rightfully appropriate.
-                      </label>
-  
-                      <div class="invalid-feedback">
-                        You must agree before submitting.
-                      </div>
-  
+                        <input class="form-check-input" type="checkbox" value="" id="agreement" name="agreement" required>
+                        <label class="form-check-label" for="agreement">All information provided are correct and rightfully appropriate.
                     </div>
-                  </div>
-                  <div class="col-6" id="submitBtn">
-                    <button id="submitTime" class="btn btn-danger" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">REQUEST</button>
-                  </div>
+                </div>
+
+                <div class="form-group col-6" id="submitBtn">
+                    <button id="submitTime" class="btn btn-danger" type="submit">REQUEST</button>
+                </div>
 
             </form>
         </div>
     </section>  
+
+    <!--Toast-->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <span class="iconify" data-icon="fluent:movies-and-tv-16-filled" style="color: #B81D24;" data-width="14" data-height="14"></span>
+            <strong class="me-auto"><span style="color:#221F1F;">Ani</span><span style="color:#B81D24;">Flix</span></strong>
+            <small>Just now</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close" style="color:#f5f5f1;"></button>
+          </div>
+          <div class="toast-body">
+            Request sent to Administrator! Check your email for further information.
+          </div>
+        </div>
+      </div>
 
     <!--FOOTER-->
     <footer class="site-footer"> 
@@ -352,6 +338,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!--jquery ui-->
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+    <!--jquery validation-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!--local js-->
     <script type="text/javascript" src="./js/scripts.js"></script>
 </body>
