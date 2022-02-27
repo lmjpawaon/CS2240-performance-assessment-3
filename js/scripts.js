@@ -27,12 +27,11 @@ $('.hero-carousel').slick({
 
 $('.carousel').slick({
     infinite: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    //autoplay: true,
+    //autoplaySpeed: 2000,
     arrows: true,
     prevArrow:'<button class="prevBtn"><span class="iconify" data-icon="ooui:previous-ltr" style="color: #f5f5f1;"></span></button>',
     nextArrow:'<button class="nxtBtn"><span class="iconify" data-icon="ooui:previous-rtl" style="color: #f5f5f1;"></span></button>',
-    centerMode:true,
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 4,
@@ -238,6 +237,19 @@ $(document).ready(function() {
       submitHandler: function(form) {
         $('.toast').toast('show');
       }
+    });
+
+    //animate and hide anime content
+    $(".contents").hide();
+
+    $(".carousel-cell").hover(function(){
+      $(this).find(".contents").show();
+      $('#'+$(this).find("div").attr("id")).animate({height:"350px"},150);
+    });
+
+    $(".carousel-cell").mouseleave(function(){
+      $(this).find(".contents").hide();
+      $('#'+$(this).find("div").attr("id")).animate({height:"50px"},150);
     });
 
 });
