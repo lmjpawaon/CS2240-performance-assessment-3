@@ -396,3 +396,27 @@ a.ui-button:active,
 .btn-close{
     color:var(--white)!important;
 }
+
+.description{
+    background-color: var(--darker-red)!important;
+    height: 50px;
+    width: 230px;
+}
+
+.description>h5{
+    font-weight: 800;
+}
+
+.contents{
+    text-align: center!important;
+}
+
+.content-icon{
+    text-align: center!important;
+}
+
+.contents>p{
+    font-size:15px;
+}
+
+/*320px*/
